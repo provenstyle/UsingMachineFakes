@@ -1,0 +1,32 @@
+[user]
+	name = Michael Dudley
+	email = michael.dudley@improvingenterprises.com
+[core]
+	autocrlf = true
+	safecrlf = false
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	sr = svn rebase
+	sd = svn dcommit
+	com = checkout master
+	jump = !git reset --hard && git clean -f -d && git checkout
+[merge]
+	summary = true
+	tool = BeyondCompare3
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "BeyondCompare3"]
+	cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\"  \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" \"$MERGED\"
+	path = C:/Program Files (x86)/Beyond Compare 3/bcomp.exe
+[diff]
+	tool = BeyondCompare3
+[difftool "BeyondCompare3"]
+	cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+	prompt = false
